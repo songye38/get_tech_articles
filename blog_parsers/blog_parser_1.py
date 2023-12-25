@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 def parse_blog_1():
     # 크롤링할 대상 URL
     url = "https://netflixtechblog.com/?gi=25d9e7be88d3"
-
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
     # 초기 세팅
@@ -20,7 +19,6 @@ def parse_blog_1():
 
 
     # 내용 정제해서 가져오기
-
     elements_with_u_flexCenter = soup.find_all(class_='u-flexCenter')
 
     # Iterate through the elements with 'u-flexCenter' class
