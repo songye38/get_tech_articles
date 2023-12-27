@@ -1,7 +1,6 @@
 
 from datetime import datetime, timedelta
 from blog_parsers.blog_parser_1 import parse_blog_1
-from blog_parsers.blog_parser_2 import parse_blog_2
 
 
 TODAY = datetime.today().date()
