@@ -30,12 +30,12 @@ def parse_blog_2(today, diff_days):
         print("The date difference is %d days or less." % diff_days)
         #글 가져오기 함수 호출 클래스 이름으로
         post_url = main_div.find('a')['href']
-        get_articles(post_url)
+        get_articles(post_url,datetime_obj)
     else:
         print("The date difference is more than %d days" % diff_days)
         return
     
-def get_articles(article_url):
+def get_articles(article_url,date_obj):
     final_text =[]
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
 
@@ -54,4 +54,4 @@ def get_articles(article_url):
         final_text.append(texts.text)
         
     final_text = " ".join(final_text)
-    save_to_csv(final_text)
+    save_to_csv('NETFLIX',date_obj,final_text)
