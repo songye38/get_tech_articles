@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from my_utils.save_file import save_to_csv
 
-# 넷플렉스 블로그 글 가져오기
+#넷플릭스 글 가져오기
 
 def parse_blog_2(today, diff_days):
     # 크롤링할 대상 URL
@@ -55,29 +55,3 @@ def get_articles(article_url):
         
     final_text = " ".join(final_text)
     save_to_csv(final_text)
-
-
-
-
-
-
-
-
-
-
-    # for element in elements_with_u_flexCenter:
-    # # Find the first 'date' element within each 'u-flexCenter' element
-    #     date_element = element.find('time')
-        
-    #     # Check if date_element is not None before accessing attributes
-    #     if date_element:
-    #         datetime_str = date_element['datetime']
-            
-    #         # Convert string to datetime object
-    #         datetime_obj = datetime.strptime(datetime_str, "%Y-%m-%dT%H:%M:%S.%fZ").date()
-    #         diff = today - datetime_obj
-    #         if abs(diff) <= timedelta(days=7):
-    #             print("The date difference is 7 days or less.")
-    #         else:
-    #             print("The date difference is more than 7 days.")
-            
