@@ -7,6 +7,10 @@ from blog_parsers.blog_parser_2 import parse_blog_2
 TODAY = datetime.today().date()
 DIFF_DAYS = 14
 
+
+
+
+
 def main():
     parse_blog_1(TODAY,DIFF_DAYS)
     parse_blog_2(TODAY,DIFF_DAYS)
