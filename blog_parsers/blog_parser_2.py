@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 # 넷플렉스 블로그 글 가져오기
 
-def parse_blog_1():
+def parse_blog_2():
     # 크롤링할 대상 URL
     today = datetime.today().date()
     url = "https://netflixtechblog.com/?gi=25d9e7be88d3"
